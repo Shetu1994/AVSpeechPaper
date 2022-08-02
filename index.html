@@ -53,15 +53,15 @@ function myEmbedFunc(seq, video_id) {
   <table width="650" border="0" align="center">
     <tbody>
       <tr>
-        <td colspan="10" align="center" valign="center"><h2>GRID as clean and LRS as interfering speaker</h2></td>
+        <td colspan="10" align="center" valign="center"><h2>Feamle Voice as clean speaker</h2></td>
       </tr>
       <tr>
         <td align="center">Noisy mixture</td>
         <td align="center">&nbsp;</td>
-		<td align="center">Audio-only model</td>
+		<td align="center">AV-Lipembs</td>
         <td align="center">&nbsp;</td>
-        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
-        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+        <td align="center">AV-Faceembs</td>
+        <td align="center">AV-Lips</td>
       </tr>
       <tr>
         <td><video width="250" id="hou_vid1" controls="controls" >
@@ -69,14 +69,14 @@ function myEmbedFunc(seq, video_id) {
         </video></td>
         <td>&nbsp;</td>
 		<td><video width="250" id="hou_vid2" controls="controls" >
-          <source src="other_methods/demo/Est_GridAO_s8_swau1n.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lipembs1.mp4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou_vid3" controls="controls" >
-          <source src="other_methods/demo/Est_GridfaceNy_s8_swau1n.mp4" type="video/mp4" />
+          <source src="Examples/AV-Faceembs1.mp4" type="video/mp4" />
         </video></td>
         <td><video width="250" id="hou_vid4" controls="controls" >
-          <source src="other_methods/demo/Est_GridLips_s8_swau1n.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lips1" type="video/mp4" />
         </video></td>
       </tr>
       <tr>
@@ -88,30 +88,30 @@ function myEmbedFunc(seq, video_id) {
   <table width="650" border="0" align="center">
     <tbody>
       <tr>
-        <td colspan="10" align="center" valign="center"><h2>LRS as clean and GRID as interfering speaker</h2></td>
+        <td colspan="10" align="center" valign="center"><h2>Male Voice as clean speaker</h2></td>
       </tr>
       <tr>
         <td align="center">Noisy mixture</td>
         <td align="center">&nbsp;</td>
-        <td align="center">Audio-only model</td>
+        <td align="center">AV-Lipembs</td>
         <td align="center">&nbsp;</td>
-        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
-        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+        <td align="center">AV-Faceembs</td>
+        <td align="center">AV-Lips</td>
       </tr>
       <tr>
         <td><video width="250" id="hou1_vid1" controls="controls" >
-          <source src="other_methods/demo/Mix_LRS_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+          <source src="Examples/AV2.mp4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou1_vid2" controls="controls" >
-          <source src="other_methods/demo/Est_LRSAO_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lipembs2.mp4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou1_vid3" controls="controls" >
-          <source src="other_methods/demo/Est_LRSfaceNy_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+          <source src="Examples/AV-Faceembs2.mp4" type="video/mp4" />
         </video></td>
         <td><video width="250" id="hou1_vid4" controls="controls" >
-          <source src="other_methods/demo/Est_LRSLips_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lips2.mp4" type="video/mp4" />
         </video></td>
       </tr>
       <tr>
@@ -129,25 +129,25 @@ function myEmbedFunc(seq, video_id) {
       <tr>
         <td align="center">Noisy mixture</td>
         <td align="center">&nbsp;</td>
-        <td align="center">Audio-only model</td>
+        <td align="center">AV-Lipembs</td>
         <td align="center">&nbsp;</td>
-        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
-        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+        <td align="center">AV-Facembs</td>
+        <td align="center">AV-Lips</td>
       </tr>
       <tr>
         <td><video width="250" id="hou2_vid1" controls="controls" >
-          <source src="other_methods/grid_example/Mixed_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+          <source src="Examples/AV3.mp4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou2_vid2" controls="controls" >
-          <source src="other_methods/grid_example/Est_AO_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lipembs3.mp4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou2_vid3" controls="controls" >
-          <source src="other_methods/grid_example/Est_faceNy_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+          <source src="Examples/AV-Faceembs3.mp4" type="video/mp4" />
         </video></td>
         <td><video width="250" id="hou2_vid3" controls="controls" >
-          <source src="other_methods/grid_example/Est_Lips_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lips3.mp4" type="video/mp4" />
         </video></td>
       </tr>
       <tr>
@@ -164,25 +164,25 @@ function myEmbedFunc(seq, video_id) {
       <tr>
         <td align="center">Noisy mixture</td>
         <td align="center">&nbsp;</td>
-        <td align="center">Audio-only model</td>
+        <td align="center">AV-Lipembs</td>
         <td align="center">&nbsp;</td>
-        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
-        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+        <td align="center">AV-Facembs</td>
+        <td align="center">AV-Lips </td>
       </tr>
       <tr>
         <td><video width="250" id="hou3_vid1" controls="controls" >
-          <source src="other_methods/LRS_example/Mixed_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+          <source src="Examples/AV4.mp4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou3_vid2" controls="controls" >
-          <source src="other_methods/LRS_example/Est_AO_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lipembs4" type="video/mp4" />
         </video></td>
         <td>&nbsp;</td>
         <td><video width="250" id="hou3_vid3" controls="controls" >
-          <source src="other_methods/LRS_example/Est_faceNy_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+          <source src="Examples/AV-Faceembs4.mp4" type="video/mp4" />
         </video></td>
         <td><video width="250" id="hou3_vid4" controls="controls" >
-          <source src="other_methods/LRS_example/Est_Lips_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+          <source src="Examples/AV-Lips4.mp4" type="video/mp4" />
         </video></td>
       </tr>
       <tr>
