@@ -31,22 +31,25 @@ function myEmbedFunc(seq, video_id) {
 
 <body>
 <div class="container">
-  <h1 align="center">An Empirical Study of Visual Features for Deep Learning
-    based Audio-Visual Speech Enhancement</h1>
+  <h1 align="center">An Empirical Study of Visual Features for DNN Based Audio-Visual Speech Enhancement in 
+	  Multi-Talker Environments</h1>
 
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <hr />
   <p>&nbsp;</p>
   <h2><a name="comparison_with_audio_visual" id="comparison_with_audio_visual"></a>Abstract</h2>
-  <p align="Left">Audio-visual speech enhancement (AVSE) methods use both audio and visual features for the task of speech enhancement and the use of visual features has been shown to be particularly effective in multi-speaker scenarios. 
+  <p align="Left">Audio-visual speech enhancement (AVSE) methods use both audio and visual features for the task of speech enhancement and the use of visual features has been shown to be particularly effective in multi-speaker scenarios.
 	  In the majority of deep neural network (DNN) based AVSE methods, the audio and visual data are first processed separately using different sub-networks, and then the learned features are fused to uti-lize the information from both modalities.
 	  There have been various studies on suitable audio input features and network architectures, however, to the best of our knowledge, there is no published study that has investigated which visual features are best suited for this specific task.
 	  In this work, we perform an empirical study of the most commonly used visual features for DNN based AVSE, the pre-processing requirements for each of these features, and investigate their influence on the performance.
 	  Our study shows that despite the overall better performance of embedding-based features, their computationally intensive pre-processing makes their use difficult in low resource systems. 
 	  For such systems, optical flow or raw pixels-based features might be better suited.</p>
   <p>&nbsp;</p>
-  <h3 colspan="10" align="center">Comparison of different visual features with respect to audio-only model</h3>
+  <h3 colspan="10" align="center">Comparison of different visual features based DNN models with respect to the noisy audio</h3>
+	<br>
+<br> Each sample is processed with 3 different models: <br>1) AV-Faceembs (Face Embeedings based Visual features)
+	<br>2) AV-Lipembs (Lip Embeedings based Visual features)<br>3) AV-Lips (Raw Lip Images based Visual features)
   <table width="650" border="0" align="center">
     <tbody>
       <tr>
