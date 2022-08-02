@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>An Empirical Study of Visual Features for Deep Learning based Audio-Visual Speech Enhancement</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script> 
+function myAudVisFunc(seq, file) { 
+    document.getElementById(seq + "_src").src = "audio_visual/" + seq + "/" + file;
+    document.getElementById(seq + "_vid").load();
+	document.getElementById(seq + "_vid").play();
+}
+function myCaptionsFunc(seq, file) { 
+    document.getElementById(seq + "_trans_src").src = "captions/" + seq + "/" + file;
+    document.getElementById(seq + "_trans_vid").load();
+	document.getElementById(seq + "_trans_vid").play();
+} 
+function myHeatmapFunc(seq, file) { 
+    document.getElementById(seq + "_heatmap_src").src = "heatmaps/" + seq + "/" + file;
+    document.getElementById(seq + "_heatmap_vid").load();
+	document.getElementById(seq + "_heatmap_vid").play();
+}
+function myEmbedFunc(seq, video_id) {
+    document.getElementById(seq + "_embed").src = "https://www.youtube.com/embed/" + video_id + "?rel=0&autoplay=1"
+    document.getElementById(seq + "_embed").load()
+    document.getElementById(seq + "_embed").play()
+}
+
+</script>
+</head>
+
+<body>
+<div class="container">
+  <h1 align="center">An Empirical Study of Visual Features for Deep Learning
+    based Audio-Visual Speech Enhancement</h1>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2><a name="comparison_with_audio_visual" id="comparison_with_audio_visual"></a>Abstract</h2>
+  <p align="Left">Audio-visual speech enhancement (AVSE) methods use both audio and visual features for the task of speech enhancement and the use of visual features has been shown to be particularly effective in multi-speaker scenarios. 
+	  In the majority of deep neural network (DNN) based AVSE methods, the audio and visual data are first processed separately using different sub-networks, and then the learned features are fused to uti-lize the information from both modalities.
+	  There have been various studies on suitable audio input features and network architectures, however, to the best of our knowledge, there is no published study that has investigated which visual features are best suited for this specific task.
+	  In this work, we perform an empirical study of the most commonly used visual features for DNN based AVSE, the pre-processing requirements for each of these features, and investigate their influence on the performance.
+	  Our study shows that despite the overall better performance of embedding-based features, their computationally intensive pre-processing makes their use difficult in low resource systems. 
+	  For such systems, optical flow or raw pixels-based features might be better suited.</p>
+  <p>&nbsp;</p>
+  <h3 colspan="10" align="center">Comparison of different visual features with respect to audio-only model</h3>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="10" align="center" valign="center"><h2>GRID as clean and LRS as interfering speaker</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Noisy mixture</td>
+        <td align="center">&nbsp;</td>
+		<td align="center">Audio-only model</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
+        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+      </tr>
+      <tr>
+        <td><video width="250" id="hou_vid1" controls="controls" >
+          <source src="Examples/AV1.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+		<td><video width="250" id="hou_vid2" controls="controls" >
+          <source src="other_methods/demo/Est_GridAO_s8_swau1n.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou_vid3" controls="controls" >
+          <source src="other_methods/demo/Est_GridfaceNy_s8_swau1n.mp4" type="video/mp4" />
+        </video></td>
+        <td><video width="250" id="hou_vid4" controls="controls" >
+          <source src="other_methods/demo/Est_GridLips_s8_swau1n.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="10" align="center" valign="center"><h2>LRS as clean and GRID as interfering speaker</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Noisy mixture</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Audio-only model</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
+        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+      </tr>
+      <tr>
+        <td><video width="250" id="hou1_vid1" controls="controls" >
+          <source src="other_methods/demo/Mix_LRS_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou1_vid2" controls="controls" >
+          <source src="other_methods/demo/Est_LRSAO_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou1_vid3" controls="controls" >
+          <source src="other_methods/demo/Est_LRSfaceNy_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+        </video></td>
+        <td><video width="250" id="hou1_vid4" controls="controls" >
+          <source src="other_methods/demo/Est_LRSLips_LRS2_ac1mOswXxLs-00006.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <h3 colspan="10" align="center"> More Examples </h3>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="10" align="center" valign="center"><h2>Video #1</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Noisy mixture</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Audio-only model</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
+        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+      </tr>
+      <tr>
+        <td><video width="250" id="hou2_vid1" controls="controls" >
+          <source src="other_methods/grid_example/Mixed_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou2_vid2" controls="controls" >
+          <source src="other_methods/grid_example/Est_AO_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou2_vid3" controls="controls" >
+          <source src="other_methods/grid_example/Est_faceNy_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+        </video></td>
+        <td><video width="250" id="hou2_vid3" controls="controls" >
+          <source src="other_methods/grid_example/Est_Lips_LRS_s9_sbwt9a_wavs_test_LJ033-0166.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="10" align="center" valign="center"><h2>Video #2</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Noisy mixture</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Audio-only model</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">AV-faceNy (Face embeddings as visual feature)</td>
+        <td align="center">AV-Lips (Raw lip images as visual feature)</td>
+      </tr>
+      <tr>
+        <td><video width="250" id="hou3_vid1" controls="controls" >
+          <source src="other_methods/LRS_example/Mixed_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou3_vid2" controls="controls" >
+          <source src="other_methods/LRS_example/Est_AO_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="250" id="hou3_vid3" controls="controls" >
+          <source src="other_methods/LRS_example/Est_faceNy_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+        </video></td>
+        <td><video width="250" id="hou3_vid4" controls="controls" >
+          <source src="other_methods/LRS_example/Est_Lips_LRS_LRS2_XzDNfLnUOYY-00036_s12_test_bgwa4s.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+<p align="center">Please contact at shetu.nitjsr13@gmail.com for further details and to get a copy of my master thesis report. </p>
+  <p>&nbsp;</p>
+<hr />
+  <p align="left">&nbsp;</p>
+  <h2 align="left">&nbsp;</h2>
+</div>
+</body>
+</html>
